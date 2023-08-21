@@ -9,13 +9,14 @@ require("dotenv").config();
 app.use(express.json());
 
 app.use(cors());
+
 app.use("/user", userRouter);
 
 app.use("/", doctorRouter);
-app.listen(8080, async () => {
+app.listen(process.env.PORT, async () => {
   try {
     await connection;
-    console.log(`${process.env.PORT} is Running`);
+    console.log(`${process.env.PORT}is Running`);
   } catch (err) {
     console.log("err", err);
   }
