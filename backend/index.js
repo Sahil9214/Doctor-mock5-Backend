@@ -7,6 +7,7 @@ const { doctorRouter } = require("./Routes/Doctor.routes");
 const { auth } = require("./Middleware/auth.middleware");
 require("dotenv").config();
 app.use(express.json());
+
 app.use(cors());
 app.use("/user", userRouter);
 
