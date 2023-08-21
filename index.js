@@ -12,7 +12,7 @@ app.use(cors());
 app.use("/user", userRouter);
 
 app.use("/", doctorRouter);
-app.listen(process.env.PORT, async () => {
+app.listen(8080, async () => {
   try {
     await connection;
     console.log(`${process.env.PORT} is Running`);
